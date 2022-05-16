@@ -1,0 +1,23 @@
+[Desktop Entry]
+Categories=Network;WebBrowser;
+Comment[en_US]=Browse the World Wide Web
+Comment=Browse the World Wide Web
+Exec=firejail --apparmor --seccomp --private  firefox-esr -no-remote
+GenericName[en_US]=Web Browser
+GenericName=Web Browser
+Icon=firefox-esr
+MimeType=text/html;image/png;image/jpeg;image/gif;application/xml;application/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;
+Name[en_US]=Firejail Firefox ESR
+Name=Firejail Firefox ESR
+Path=
+StartupNotify=true
+StartupWMClass=Firefox-esr
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-GNOME-FullName=Firejail Firefox ESR Web Browser
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-MultipleArgs=false

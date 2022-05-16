@@ -1,0 +1,35 @@
+## First rule - delete all
+-D
+
+## Increase the buffers to survive stress events.
+## Make this bigger for busy systems
+-b 8192
+
+## This determine how long to wait in burst of events
+--backlog_wait_time 60000
+
+## Set failure mode to syslog
+-f 1
+
+# insmod Execution, rmmod and modprobe
+-w /sbin/insmod -p x
+-w /sbin/modprobe -p x
+-w /sbin/rmmod -p x
+# Audit /etc/ modifications
+-w /etc/ -p wa
+# Audit mount/Unmount
+-a exit,always -F arch=b64 -S mount -S umount2
+# Audit syscalls x86 suspects
+-a exit,always -F arch=b64 -S ioperm -S modify_ldt
+# Audit rare syscalls
+-a exit,always -F arch=b64 -S get_kernel_syms -S ptrace
+-a exit,always -F arch=b64 -S prctl
+
+-a exit ,always -F arch=b64 -S unlink -S rmdir -S rename
+#-a exit ,always -F arch=b64 -S creat -S open -S openat -F exit=-EACCESS
+#-a exit ,always -F arch=b64 -S truncate -S ftruncate -F exit=-EACCESS
+
+
+# Lock auditd configuration
+-e 2
+
