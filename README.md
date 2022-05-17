@@ -82,7 +82,9 @@ Synthesis: additional resources to download before executing scripts:
 - `virtualbox-6.1_6.1.34-150636.1~Debian~bullseye_amd64.deb`
 - `Oracle_VM_VirtualBox_Extension_Pack-6.1.34.vbox-extpack`
 - `marktext-amd64.deb`
+To simplify the download of these resources, we provide you `00_Resources.sh` to execute first to retrieve locally the necessary files.
 
+Have a good time :-)
 
 
 
