@@ -1,10 +1,12 @@
 # debiandesktop-hardening
 
-This repository's goal aims to help you hardening your Debian11.x/KDE environment to use it securely on the internet.
+This repository's goal aims to help you hardening your Debian11.x/KDE environment and use it securely on the internet.
 
-I have made several Shell scripts to allow you selecting the script corresponding to needs.
+I have made several Shell scripts to allow you selecting the script corresponding to your needs.
 
-Each script starts with a number which is the order to run them.
+Each script starts with a number corresponding to the order of execution.
+
+Before executing them make them executable (`chmod`...)
 
 Put all those scripts and additional resources in the same directory.
 
