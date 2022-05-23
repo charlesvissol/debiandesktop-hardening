@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-echo -n "Enter username to add to root (only One for this system!): "
+echo -n "Enter username to add desktop shortcut: "
 read usernameroot
 
 exec > ./21_tor_browser.log 2>&1
