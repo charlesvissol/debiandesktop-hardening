@@ -24,12 +24,6 @@
 # Audit rare syscalls
 -a exit,always -F arch=b64 -S get_kernel_syms -S ptrace
 -a exit,always -F arch=b64 -S prctl
-
--a exit ,always -F arch=b64 -S unlink -S rmdir -S rename
-#-a exit ,always -F arch=b64 -S creat -S open -S openat -F exit=-EACCESS
-#-a exit ,always -F arch=b64 -S truncate -S ftruncate -F exit=-EACCESS
-
-
+-a exit,always -F arch=b64 -S unlink -S rmdir -S rename
 # Lock auditd configuration
 -e 2
-
