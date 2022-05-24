@@ -87,6 +87,12 @@ Synthesis: additional resources to download before executing scripts:
 
 To simplify the download of these resources, we provide you `00_Resources.sh` to execute first to retrieve locally the necessary files.
 
+> If you really want to push the limits of hardening with auditd, I recommend you to go to https://github.com/Neo23x0/auditd. this is a very interesting set of rules.
+
+
+
+
+
 Have a good time :-)
 
 
