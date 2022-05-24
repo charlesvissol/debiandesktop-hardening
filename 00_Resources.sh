@@ -32,5 +32,7 @@ echo "Step 00: Install and configuration Tor Browser --> MSG: Download VirtualBo
 curl -O -v https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Debian~bullseye_amd64.deb
 curl -O -v https://download.virtualbox.org/virtualbox/6.1.34/Oracle_VM_VirtualBox_Extension_Pack-6.1.34.vbox-extpack
 
-
+echo "################################################"
+echo "#   Step 00: Download external resources - END #"
+echo "################################################"
 
