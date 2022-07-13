@@ -64,52 +64,52 @@ sed -i ${numline9}'s/.*/net.ipv4.conf.all.secure_redirects = 0/' /etc/sysctl.con
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.all.send_redirects value"
 sudo sysctl -a | grep net.ipv4.conf.all.send_redirects
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.all.send_redirects = 0"
-sudo sysctl -w net.ipv4.conf.all.send_redirects=0
+sudo sysctl -w net.ipv4.conf.all.send_redirects=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.default.send_redirects value"
 sudo sysctl -a | grep net.ipv4.conf.default.send_redirects
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.default.send_redirects = 0"
-sudo sysctl -w net.ipv4.conf.default.send_redirects=0
+sudo sysctl -w net.ipv4.conf.default.send_redirects=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.all.accept_source_route value"
-sudo sysctl -a | grep net.ipv4.conf.all.accept_source_route
+sudo sysctl -a | grep net.ipv4.conf.all.accept_source_route >> /etc/sysctl.conf
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.all.accept_source_route = 0"
-sudo sysctl -w net.ipv4.conf.all.accept_source_route=0
+sudo sysctl -w net.ipv4.conf.all.accept_source_route=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.default.accept_source_route value"
-sudo sysctl -a | grep net.ipv4.conf.default.accept_source_route
+sudo sysctl -a | grep net.ipv4.conf.default.accept_source_route >> /etc/sysctl.conf
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.default.accept_source_route = 0"
-sudo sysctl -w net.ipv4.conf.default.accept_source_route=0
+sudo sysctl -w net.ipv4.conf.default.accept_source_route=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.all.accept_redirects value"
 sudo sysctl -a | grep net.ipv4.conf.all.accept_redirects
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.all.accept_redirects = 0"
-sudo sysctl -w net.ipv4.conf.all.accept_redirects=0
+sudo sysctl -w net.ipv4.conf.all.accept_redirects=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.default.accept_redirects value"
 sudo sysctl -a | grep net.ipv4.conf.default.accept_redirects
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.default.accept_redirects = 0"
-sudo sysctl -w net.ipv4.conf.default.accept_redirects=0
+sudo sysctl -w net.ipv4.conf.default.accept_redirects=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.all.secure_redirects value"
 sudo sysctl -a | grep net.ipv4.conf.all.secure_redirects
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.all.secure_redirects = 0"
-sudo sysctl -w net.ipv4.conf.all.secure_redirects=0
+sudo sysctl -w net.ipv4.conf.all.secure_redirects=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.default.secure_redirects value"
 sudo sysctl -a | grep net.ipv4.conf.default.secure_redirects
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.default.secure_redirects = 0"
-sudo sysctl -w net.ipv4.conf.default.secure_redirects=0
+sudo sysctl -w net.ipv4.conf.default.secure_redirects=0 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.all.log_martians value"
 sudo sysctl -a | grep net.ipv4.conf.all.log_martians
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.all.log_martians = 1"
-sudo sysctl -w net.ipv4.conf.all.log_martians=1
+sudo sysctl -w net.ipv4.conf.all.log_martians=1 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.conf.default.log_martians value"
 sudo sysctl -a | grep net.ipv4.conf.default.log_martians
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.conf.default.log_martians = 1"
-sudo sysctl -w net.ipv4.conf.default.log_martians=1
+sudo sysctl -w net.ipv4.conf.default.log_martians=1 >> /etc/sysctl.conf
 
 #echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.icmp_echo_ignore_broadcast = 1"
 #sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcast=1
@@ -117,38 +117,38 @@ sudo sysctl -w net.ipv4.conf.default.log_martians=1
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv4.icmp_ignore_bogus_error_responses value"
 sudo sysctl -a | grep net.ipv4.icmp_ignore_bogus_error_responses
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv4.icmp_ignore_bogus_error_responses = 1"
-sudo sysctl -w net.ipv4.icmp_ignore_bogus_error_responses=1
+sudo sysctl -w net.ipv4.icmp_ignore_bogus_error_responses=1 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv6.conf.all.accept_ra value"
 sudo sysctl -a | grep net.ipv6.conf.all.accept_ra
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv6.conf.all.accept_ra = 1"
-sudo sysctl -w net.ipv6.conf.all.accept_ra=1
+sudo sysctl -w net.ipv6.conf.all.accept_ra=1 >> /etc/sysctl.conf
 
 echo "#Step 10: Configure sudo sysctl --> MSG: Get net.ipv6.conf.default.accept_ra value"
 sudo sysctl -a | grep net.ipv6.conf.default.accept_ra
 echo "#Step 10: Configure sudo sysctl --> MSG: Write net.ipv6.conf.default.accept_ra = 1"
-sudo sysctl -w net.ipv6.conf.default.accept_ra=1
+sudo sysctl -w net.ipv6.conf.default.accept_ra=1 >> /etc/sysctl.conf
 
-echo "#Step 10: Configure /etc/sysctl.conf --> MSG: Apply changes"
-sudo sysctl -p
+#echo "#Step 10: Configure /etc/sysctl.conf --> MSG: Apply changes"
+#sudo sysctl -p
 
 echo "#Step 10: Configure /etc/sysctl.conf --> MSG: Display /etc/sysctl.conf modified"
 cat /etc/sysctl.conf
 
-echo "#Step 10: Configure sudo sysctl --> MSG: Get new sudo sysctl values"
-sudo sysctl -a | grep net.ipv4.conf.all.send_redirects
-sudo sysctl -a | grep net.ipv4.conf.default.send_redirects
-sudo sysctl -a | grep net.ipv4.conf.all.accept_source_route
-sudo sysctl -a | grep net.ipv4.conf.default.accept_source_route
-sudo sysctl -a | grep net.ipv4.conf.all.accept_redirects
-sudo sysctl -a | grep net.ipv4.conf.default.accept_redirects
-sudo sysctl -a | grep net.ipv4.conf.all.secure_redirects
-sudo sysctl -a | grep net.ipv4.conf.default.secure_redirects
-sudo sysctl -a | grep net.ipv4.conf.all.log_martians
-sudo sysctl -a | grep net.ipv4.conf.default.log_martians
-sudo sysctl -a | grep net.ipv4.icmp_ignore_bogus_error_responses
-sudo sysctl -a | grep net.ipv6.conf.all.accept_ra
-sudo sysctl -a | grep net.ipv6.conf.default.accept_ra
+#echo "#Step 10: Configure sudo sysctl --> MSG: Get new sudo sysctl values"
+#sudo sysctl -a | grep net.ipv4.conf.all.send_redirects
+#sudo sysctl -a | grep net.ipv4.conf.default.send_redirects
+#sudo sysctl -a | grep net.ipv4.conf.all.accept_source_route
+#sudo sysctl -a | grep net.ipv4.conf.default.accept_source_route
+#sudo sysctl -a | grep net.ipv4.conf.all.accept_redirects
+#sudo sysctl -a | grep net.ipv4.conf.default.accept_redirects
+#sudo sysctl -a | grep net.ipv4.conf.all.secure_redirects
+#sudo sysctl -a | grep net.ipv4.conf.default.secure_redirects
+#sudo sysctl -a | grep net.ipv4.conf.all.log_martians
+#sudo sysctl -a | grep net.ipv4.conf.default.log_martians
+#sudo sysctl -a | grep net.ipv4.icmp_ignore_bogus_error_responses
+#sudo sysctl -a | grep net.ipv6.conf.all.accept_ra
+#sudo sysctl -a | grep net.ipv6.conf.default.accept_ra
 
 
 echo "################################################"
