@@ -1,1 +1,1 @@
--a always,exit -F arch=b64 -S mount -S umount -F -k mounts
+-a always,exit -F arch=b64 -S mount -S umount2 -k mounts
