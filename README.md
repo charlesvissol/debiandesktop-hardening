@@ -90,7 +90,9 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 > If you really want to push the limits of hardening with auditd, I recommend you to go to https://github.com/Neo23x0/auditd. this is a very interesting set of rules.
 
 
-
+## Release 1.8:
+- Add update_upgrade.sh script to automate the update & upgrade process of Debian/Ubuntu
+- Add 25_samba.sh to automate the attachment of a Samba shared folder to the Debian/Ubuntu environment
 
 
 Have a good time :-)
