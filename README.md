@@ -91,11 +91,11 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 
 
 ## Release 1.8:
-- Add update_upgrade.sh script to automate the update & upgrade process of Debian/Ubuntu
-- Add 25_samba.sh to automate the attachment of a Samba shared folder to the Debian/Ubuntu environment
+- Add `update_upgrade.sh` script to automate the update & upgrade process of Debian/Ubuntu
+- Add `25_samba.sh` to automate the attachment of a Samba shared folder to the Debian/Ubuntu environment
 
 ## Release 1.9:
-- Add script to install Docker CE, Docker CE client, containerd.io and Docker compose plugin
+- Add script `26_Docker.sh` to install Docker CE, Docker CE client, containerd.io and Docker compose plugin
 
 
 Have a good time :-)
