@@ -97,6 +97,13 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 ## Release 1.9:
 - Add script `26_Docker.sh` to install Docker CE, Docker CE client, containerd.io and Docker compose plugin
 
+## Release 2.0:
+- Update of the `19_virtualbox.sh`to adapt it to the last version of VirtualBox (Release 7)
+
+## Release 2.1:
+- Add script `27_MS_teams_via_snapd.sh`to install automatically Ms Teams using snap installation
+
+
 
 Have a good time :-)
 
