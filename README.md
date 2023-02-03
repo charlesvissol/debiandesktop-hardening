@@ -103,7 +103,9 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 ## Release 2.1:
 - Add script `27_MS_teams_via_snapd.sh`to install automatically Ms Teams using snap installation
 
-
+## Release 2.2:
+- Add script `01_battery_control.sh`to check battery health
+- Add script `02_bash_aliases.sh`to custom welcome message of the Terminal
 
 Have a good time :-)
 
