@@ -32,7 +32,7 @@ echo "Step 02: Terminal Welcome --> MSG: Install linuxlogo"
 apt-get install linuxlogo -y
 
 
-echo "#Step 16: Install and configuration Antivirus --> MSG: Add rules OnAccessIncludePath and OnAccessPrevention"
+echo "Step 02: Terminal Welcome --> MSG: .bash_aliases creation and modification"
 touch /home/$usernameroot/.bash_aliases
 chown $usernameroot:$usernameroot /home/$usernameroot/.bash_aliases
 echo "cat<<'EOF'" > /home/$usernameroot/.bash_aliases
