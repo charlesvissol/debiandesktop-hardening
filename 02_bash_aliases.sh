@@ -37,7 +37,7 @@ touch /home/$usernameroot/.bash_aliases
 chown $usernameroot:$usernameroot /home/$usernameroot/.bash_aliases
 echo "cat<<'EOF'" > /home/$usernameroot/.bash_aliases
 echo " " >> /home/$usernameroot/.bash_aliases
-echo " "tmsg" " >> /home/$usernameroot/.bash_aliases
+echo " "$tmsg" " >> /home/$usernameroot/.bash_aliases
 echo " " >> /home/$usernameroot/.bash_aliases
 echo "EOF" >> /home/$usernameroot/.bash_aliases
 echo "linuxlogo" >> /home/$usernameroot/.bash_aliases
