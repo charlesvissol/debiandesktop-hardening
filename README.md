@@ -107,6 +107,9 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 - Add script `01_battery_control.sh`to check battery health
 - Add script `02_bash_aliases.sh`to custom welcome message of the Terminal
 
+## Release 2.2.1:
+- Bug fixing of `02_bash_aliases.sh`
+
 Have a good time :-)
 
 
