@@ -110,6 +110,17 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 ## Release 2.2.1:
 - Bug fixing of `02_bash_aliases.sh`
 
+
+## Release 2.3:
+5 security scripts added:
+- `28_auto_security_updates.sh`: automate the security updates to maintain your system up-to-date
+- `29_clean_package_cache.sh: a script to clean package cache
+- `30_Disable_dumps.sh`: Disable core dumps
+- `31_fail2ban.sh`: Enable fail2ban service
+- `32_accounting_on.sh`: Enable process accounting
+
+
+
 Have a good time :-)
 
 
