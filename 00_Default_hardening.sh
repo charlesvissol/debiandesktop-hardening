@@ -18,5 +18,10 @@
 ./18_stacer.sh
 ./19_virtualbox.sh
 ./20_marktext.sh
+./22_kde_wallet.sh
 ./23_firewall.sh
 ./24_GetSystemInfos.sh
+./28_auto_security_updates.sh
+./30_Disable_dumps.sh
+./31_fail2ban.sh
+./32_accounting_on.sh
