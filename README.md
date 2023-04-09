@@ -1,7 +1,7 @@
 # debiandesktop-hardening
 
 > Important
-> For Debian 11.6 KDE Desktop with the 2.4 release of these script score is **79/100**.
+> For Debian 11.6 KDE Desktop with the 2.4 release of these script Lynis audit score is **79/100**.
 <br>
 This repository's goal aims to help you hardening your Debian11.x/KDE environment and use it securely on the internet.
 
