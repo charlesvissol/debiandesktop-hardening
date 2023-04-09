@@ -1,5 +1,8 @@
 # debiandesktop-hardening
 
+> Important
+> For Debian 11.6 KDE Desktop with the 2.4 release of these script score is *79/100*.
+<br>
 This repository's goal aims to help you hardening your Debian11.x/KDE environment and use it securely on the internet.
 
 I have made several Shell scripts to allow you selecting the script corresponding to your needs.
@@ -119,7 +122,9 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 - `31_fail2ban.sh`: Enable fail2ban service
 - `32_accounting_on.sh`: Enable process accounting
 
-
+### Release 2.4:
+1 Security audit added:
+- `33_Lynis.sh`: Install the last version of Lynis and run a full system audit
 
 Have a good time :-)
 
