@@ -19,6 +19,8 @@ echo "##################################################"
 echo "#   Step 35: Installing Rkhunter tool - START    #"
 echo "##################################################"
 
+exec > ./35_install_rkhunter.log 2>&1
+
 # ask for root privileges
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 

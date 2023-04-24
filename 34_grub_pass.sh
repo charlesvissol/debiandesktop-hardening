@@ -19,6 +19,8 @@ echo "#############################################################"
 echo "#   Step 34: Setting up a passwphrase for grub init - START #"
 echo "#############################################################"
 
+exec > ./34_grub_pass.log 2>&1
+
 # root privileges
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 

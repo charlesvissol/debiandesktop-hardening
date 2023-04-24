@@ -19,6 +19,8 @@ echo "##################################################"
 echo "#   Step 33: Adding a banner to terminal - START #"
 echo "##################################################"
 
+exec > ./33_banners.log 2>&1
+
 # ask for root privileges
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 
