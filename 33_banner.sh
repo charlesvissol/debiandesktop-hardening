@@ -14,18 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+exec > ./33_banners.log 2>&1
 
 echo "##################################################"
 echo "#   Step 33: Adding a banner to terminal - START #"
 echo "##################################################"
 
-exec > ./33_banners.log 2>&1
-
-# ask for root privileges
-[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
-
 # banner
-banner="Warning !! Be Careful about privacy. Data theft unauthorized !"
+banner="Warning !! This system is restricted to authorized individuals ans is the property of InnovIT. Unauthorized access is prohibited."
 
 # add banner in the files
 echo "$banner" > /etc/issue

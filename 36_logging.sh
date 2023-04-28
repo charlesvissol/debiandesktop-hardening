@@ -14,22 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+exec > ./36_logging.log 2>&1
 
 echo "##################################################"
 echo "#   Step 36: Adding logging system - START       #"
 echo "##################################################"
-
-exec > ./36_logging.log 2>&1
-
-# ask for root privileges
-[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 
 # edit config rsyslog
 echo "*.* @remote-host:514" > /etc/rsyslog.conf
 
 # restart rsyslog
 sudo systemctl restart rsyslog
-
 
 echo "##################################################"
 echo "#   Step 36: Adding logging system - END         #"

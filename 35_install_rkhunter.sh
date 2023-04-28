@@ -14,19 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+exec > ./35_install_rkhunter.log 2>&1
 
 echo "##################################################"
 echo "#   Step 35: Installing Rkhunter tool - START    #"
 echo "##################################################"
 
-exec > ./35_install_rkhunter.log 2>&1
-
-# ask for root privileges
-[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
-
 sudo apt update
 
 sudo apt install -y rkhunter
+
+sudo rkhunter -c
 
 echo "##################################################"
 echo "#   Step 35: Installing Rkhunter tool - END      #"

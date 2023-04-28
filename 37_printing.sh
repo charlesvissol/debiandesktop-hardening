@@ -14,18 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+exec > ./37_printing.log 2>&1
 
 echo "##################################################"
 echo "#   Step 38: Changing cups permissions - START   #"
 echo "##################################################"
 
-exec > ./37_printing.log 2>&1
-
-# ask for root privileges
-[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
-
 # adjust permissions of cupsd config
-sudo chmod 640 /etc/cups/cupsd.config
+sudo chmod 640 /etc/cups/cupsd.conf
 
 # add line in config
 echo "Listen localhost:631" > /etc/cups/cupsd.conf
