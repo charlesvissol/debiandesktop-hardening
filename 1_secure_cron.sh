@@ -32,6 +32,10 @@ echo "#Step 1: Secure Cron --> MSG: Secure /etc/cron.daily"
 chown root:root /etc/cron.daily
 chmod og-rwx /etc/cron.daily
 
+echo "#Step 1: Secure Cron --> MSG: Secure /etc/cron.weekly"
+chown root:root /etc/cron.weekly
+chmod og-rwx /etc/cron.weekly
+
 echo "#Step 1: Secure Cron --> MSG: Secure /etc/cron.monthly"
 chown root:root /etc/cron.monthly
 chmod og-rwx /etc/cron.monthly
