@@ -24,8 +24,6 @@ sudo apt update
 
 sudo apt install -y rkhunter
 
-sudo rkhunter -c
-
 echo "##################################################"
 echo "#   Step 35: Installing Rkhunter tool - END      #"
 echo "##################################################"
