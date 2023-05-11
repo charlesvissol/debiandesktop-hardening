@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-exec > ./33_banners.log 2>&1
+exec > ./33_banner.log 2>&1
 
 echo "##################################################"
 echo "#   Step 33: Adding a banner to terminal - START #"
