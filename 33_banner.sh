@@ -21,7 +21,7 @@ echo "#   Step 33: Adding a banner to terminal - START #"
 echo "##################################################"
 
 # banner
-banner="Warning !! This system is restricted to authorized individuals ans is the property of InnovIT. Unauthorized access is prohibited."
+banner="Warning !! This system is restricted to authorized individuals ans is the property of XXXX. Unauthorized access is prohibited."
 
 # add banner in the files
 echo "$banner" > /etc/issue
