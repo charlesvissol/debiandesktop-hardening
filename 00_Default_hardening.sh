@@ -21,7 +21,13 @@
 ./22_kde_wallet.sh
 ./23_firewall.sh
 ./24_GetSystemInfos.sh
+./26_Docker.sh
 ./28_auto_security_updates.sh
+./29_clean_package_cache.sh
 ./30_Disable_dumps.sh
 ./31_fail2ban.sh
 ./32_accounting_on.sh
+./33_banner.sh
+./34_install_rkhunter.sh
+./35_logging.sh
+./36_printing.sh
