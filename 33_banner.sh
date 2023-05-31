@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+echo "Enter your company name"
+read company_name
+
 exec > ./33_banner.log 2>&1
 
 echo "##################################################"
@@ -21,10 +24,13 @@ echo "#   Step 33: Adding a banner to terminal - START #"
 echo "##################################################"
 
 # banner
-banner="Warning !! This system is restricted to authorized individuals ans is the property of XXXX. Unauthorized access is prohibited."
+echo "*** Creating the Banner with custom company name ***"
+banner="Warning !! This system is restricted to authorized individuals ans is the property of $company_name. Unauthorized access is prohibited."
 
 # add banner in the files
+echo "*** Adding a banner in /etc/issue file ***"
 echo "$banner" > /etc/issue
+echo "*** Adding a banner in /etc/issue.net file ***"
 echo "$banner" > /etc/issue.net
 
 echo "##################################################"

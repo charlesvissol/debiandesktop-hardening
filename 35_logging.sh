@@ -21,9 +21,11 @@ echo "#   Step 36: Adding logging system - START       #"
 echo "##################################################"
 
 # edit config rsyslog
+echo "*** Adding remote-host IP int /etc/rsyslog.conf file ***"
 echo "*.* @remote-host:514" > /etc/rsyslog.conf
 
 # restart rsyslog
+echo "*** Restarting rsyslog service ***"
 sudo systemctl restart rsyslog
 
 echo "##################################################"
