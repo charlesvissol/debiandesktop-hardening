@@ -20,9 +20,9 @@ echo "##################################################"
 echo "#   Step 35: Installing Rkhunter tool - START    #"
 echo "##################################################"
 
-sudo apt update
+apt update
 
-sudo apt install -y rkhunter
+apt install -y rkhunter
 
 echo "##################################################"
 echo "#   Step 35: Installing Rkhunter tool - END      #"
