@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-exec > ./install_torghostng.log 2>&1
+exec > ./38_install_torghostng.log 2>&1
 
 echo "######################################"
 echo "#     Install TorghostNG - START     #"
@@ -26,7 +26,7 @@ git clone https://github.com/Zopolis4/TorghostNG
 
 cd TorghostNG/
 
-python3 install.py
+python3 install.py -y
 
 
 echo "######################################"
