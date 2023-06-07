@@ -20,14 +20,14 @@ echo "######################################"
 echo "#     Install Tor network - START     #"
 echo "######################################"
 
-
+echo "#Step 1: Install tor service"
 apt install -y tor
 
-echo "#Step 10: Configure /etc/tor/torrc --> MSG: RunAsDaemon 1"
+echo "#Step 2: Configure /etc/tor/torrc --> MSG: RunAsDaemon 1"
 numline3=$(cat -n /etc/tor/torrc | grep 'RunAsDaemon' | awk '{print $1;}')
 sed -i ${numline3}'s/.*/RunAsDaemon 1/' /etc/tor/torrc
 
-echo "#Step 10: Restart Tor service --> systemctl restart tor"
+echo "#Step 3: Restart Tor service --> systemctl restart tor"
 systemctl restart tor
 
 echo "######################################"
