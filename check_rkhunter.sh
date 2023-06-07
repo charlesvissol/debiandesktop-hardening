@@ -22,7 +22,7 @@ echo "##########################################################"
 
 
 #checking config (skip : waiting for keypress)
-rkhunter -c -sk
+sudo rkhunter -c -sk
 
 
 echo "##########################################################"

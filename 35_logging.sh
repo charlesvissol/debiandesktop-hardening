@@ -26,7 +26,7 @@ echo "*.* @remote-host:514" > /etc/rsyslog.conf
 
 # restart rsyslog
 echo "*** Restarting rsyslog service ***"
-systemctl restart rsyslog
+sudo systemctl restart rsyslog
 
 echo "##################################################"
 echo "#   Step 36: Adding logging system - END         #"
