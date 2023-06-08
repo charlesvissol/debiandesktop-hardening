@@ -21,7 +21,7 @@ echo "#   Step 38: Changing cups permissions - START   #"
 echo "##################################################"
 
 # adjust permissions of cupsd config
-sudo chmod 640 /etc/cups/cupsd.conf
+chmod 640 /etc/cups/cupsd.conf
 
 # add line in config
 echo "Listen localhost:631" > /etc/cups/cupsd.conf
