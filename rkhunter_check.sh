@@ -14,17 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-exec > ./check_rkhunter.log 2>&1
-
-echo "##########################################################"
-echo "# Check system rootkits and backdoors : rkhunter - START #"
-echo "##########################################################"
-
 
 #checking config (skip : waiting for keypress)
 sudo rkhunter -c -sk
-
-
-echo "##########################################################"
-echo "#  Check system rootkits and backdoors : rkhunter - END  #"
-echo "##########################################################"
