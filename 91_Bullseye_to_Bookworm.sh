@@ -14,6 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Suggested answers when your system is hardened:
+#   /etc/issue = n
+#   /etc/issue.net = n
+#   restart packages during upgrade = yes
+#   /etc/login.defs = n
+#   /etc/security/limits.conf = n
+#   /etc/apparmor.d/firejail-default = n
+#   /etc/sudoers = n
+#   /etc/rsyslog.conf = n
+#   aide.conf = keep the local version currently installed
+#   /etc/audit/auditd.conf = n
+#
+
+
 echo -n "Enter your current username/logon: "
 read usernameroot
 
