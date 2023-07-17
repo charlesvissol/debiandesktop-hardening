@@ -88,6 +88,10 @@ sudo rm /var/cache/apt/archives/*.deb
 
 sudo apt update
 sudo apt full-upgrade
+# upgrade existing packages
+sudo apt upgrade --without-new-pkgs -y
+
+
 
 
 
