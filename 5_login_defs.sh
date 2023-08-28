@@ -30,6 +30,10 @@ cp ./login.defs /etc/login.defs
 echo "#Step 5: Configure Logins --> MSG: Change to root owner"
 chown root:root /etc/login.defs
 
+echo "#Step 5: Configure Logins --> MSG: Define max inactive age to 30 days"
+useradd -D -f 30
+
+
 echo "#Step 5: Configure Logins --> MSG: Display /etc/login.defs content"
 cat /etc/login.defs
 
