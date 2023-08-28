@@ -27,12 +27,16 @@ sudo apt install -y libpam-pwquality
 echo "#Step 3: Install PAM libs --> MSG: Install libpam-shield"
 sudo apt install -y libpam-shield
 
+echo "#Step 3: Install PAM libs --> MSG: Install libpam-cracklib"
+sudo apt install -y libpam-cracklib
+
 echo "#Step 3: Install PAM libs --> MSG: Install libpam-tmpdir"
 sudo apt install -y libpam-tmpdir
 
 echo "#Step 3: Install PAM libs --> MSG: Verification"
 apt search libpam-pwquality
 apt search libpam-shield
+apt search libpam-cracklib
 apt search libpam-tmpdir
 
 echo "#####################################"
