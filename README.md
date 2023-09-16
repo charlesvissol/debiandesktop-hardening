@@ -129,7 +129,7 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 - `33_Lynis.sh`: Install the last version of Lynis and run a full system audit
 
 ### Release 2.5:
-In this last release, we've been pushing the hardening to wath we consider its maximum for a Desktop environment.
+In this last release, we've been pushing the hardening to what we consider its maximum for a Desktop environment.
 We added:
 - `34_install_rkhunter.sh`to install RootKit Hunter and an utility script `rkhunter_check.sh`
 - `35_logging.sh` to configure syslog
