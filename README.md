@@ -1,7 +1,9 @@
 # debiandesktop-hardening
 
 > Important
-> For Debian 11.6 KDE Desktop with the 2.4 release of these script Lynis audit score is **79/100**.
+> These scripts are usable for Debian 11 and Debian 12. Some of them are specific to KDE environment, but for the main part of these script, you can run this "bundle" in the major part of Debian family distros.
+> Use them as you want, they are made for the community.
+> When we run all of them, we reach the score of 82/100 using Lynis control
 <br>
 This repository's goal aims to help you hardening your Debian11.x/KDE environment and use it securely on the internet.
 
@@ -126,7 +128,20 @@ To simplify the download of these resources, we provide you `00_Resources.sh` to
 1 Security audit added:
 - `33_Lynis.sh`: Install the last version of Lynis and run a full system audit
 
-Have a good time :-)
+### Release 2.5:
+In this last release, we've been pushing the hardening to wath we consider its maximum for a Desktop environment.
+We added:
+- `34_install_rkhunter.sh`to install RootKit Hunter and an utility script `rkhunter_check.sh`
+- `35_logging.sh` to configure syslog
+- `36_printing.sh̀`to configure cupsd.conf
+- `39_tor_network.sh`to add the Tor network service (so you can switch when you want you default webbrowser to Tor network)
+
+We renamed 33_Lynis.sh to 37_Lynis.sh to add the Lynis control at the end of the execution of all or almost all scripts.
+
+In this last release, we also added 2 scripts (`91_Bullseye_to_Bookworm.sh̀, ̀92_Bullseye_to_Bookworm.sh`) to automate the upgrade from Debian 11 to Debian 12. That will ease your life :-)
+
+
+Enjoy this new release !
 
 
 
