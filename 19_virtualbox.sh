@@ -25,7 +25,7 @@ echo "#   Step 19: Install and configuration VirtualBox - START #"
 echo "###########################################################"
 
 echo "Step 19: Install and configuration VirtualBox --> MSG: Install package VirtualBox"
-apt-get install -y ./virtualbox-7.0_7.0.14-161095~Debian~bookworm_amd64.deb
+apt-get install -y ./virtualbox-7.2_7.2.4-170995~Debian~trixie_amd64.deb
 
 echo "Step 19: Install and configuration VirtualBox --> MSG: Copy Desktop shortcut to VirtualBox"
 cp ./virtualbox.desktop /home/$usernameroot/Desktop/virtualbox.desktop
