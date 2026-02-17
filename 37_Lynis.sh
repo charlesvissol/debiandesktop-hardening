@@ -34,7 +34,7 @@ echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | sudo t
 
 echo "Step 33: Install and run Lynis --> MSG: Install Lynis"
 sudo apt update
-sudo apt install lynis
+sudo apt install -y lynis
 
 echo "Step 33: Install and run Lynis --> MSG: Run Lynis for system audit"
 sudo lynis audit system

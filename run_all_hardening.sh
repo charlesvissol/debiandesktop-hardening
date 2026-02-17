@@ -188,15 +188,17 @@ SCRIPTS=(
 handle_aide_prerequisites() {
     log_message "INFO" "${YELLOW}Preparing prerequisites for AIDE...${NC}"
     
-    # Check if aide.db exists
-    if [ ! -f "/var/lib/aide/aide.db" ]; then
-        log_message "INFO" "Creating AIDE database directory..."
-        mkdir -p /var/lib/aide
-        
-        log_message "INFO" "AIDE database will be created by the script"
-    else
-        log_message "INFO" "AIDE database already exists"
-    fi
+    # Ensure aide package is installed before initialization
+    log_message "INFO" "Installing AIDE package..."
+    apt-get install -y aide
+    
+    # Create directory if it doesn't exist
+    mkdir -p /var/lib/aide
+    
+    # Wait for package configuration to complete
+    sleep 2
+    
+    log_message "INFO" "AIDE prerequisites ready"
 }
 
 # Function to modify script with stdin input for automatic execution
@@ -383,25 +385,25 @@ echo -e "${BLUE}ORGANIZING LOG FILES${NC}"
 echo -e "${BLUE}========================================${NC}"
 echo ""
 
-LOG_DIR="logs_${log_hostname}_$(date +%Y%m%d_%H%M%S)"
+LOG_DIR="logs_${log_hostname}"
 log_message "INFO" "Creating log directory: $LOG_DIR"
 
 # Create log directory
 mkdir -p "$LOG_DIR"
 
-# Move all .log files to the directory (except the automation log)
-log_message "INFO" "Moving individual script logs to $LOG_DIR"
+# Copy all .log files to the directory (except the automation log)
+log_message "INFO" "Copying individual script logs to $LOG_DIR"
 LOG_COUNT=0
 for logfile in *.log; do
     if [ -f "$logfile" ] && [ "$logfile" != "$(basename $AUTOMATION_LOG)" ]; then
-        mv "$logfile" "$LOG_DIR/"
+        cp "$logfile" "$LOG_DIR/"
         LOG_COUNT=$((LOG_COUNT + 1))
     fi
 done
 
-# Also move the automation log
-mv "$AUTOMATION_LOG" "$LOG_DIR/"
-log_message "INFO" "Moved automation log to $LOG_DIR"
+# Also copy the automation log
+cp "$AUTOMATION_LOG" "$LOG_DIR/"
+log_message "INFO" "Copied automation log to $LOG_DIR"
 
 # Change ownership of the directory and all files inside
 log_message "INFO" "Changing ownership to $usernameroot:$usernameroot"
@@ -431,6 +433,29 @@ if command -v zip &> /dev/null; then
 else
     log_message "WARNING" "${YELLOW}zip command not found, skipping compression${NC}"
     echo -e "${YELLOW}Install zip package: apt-get install zip${NC}"
+fi
+
+echo ""
+
+# Copy update_upgrade.sh to Desktop
+echo -e "${BLUE}========================================${NC}"
+echo -e "${BLUE}FINAL SETUP${NC}"
+echo -e "${BLUE}========================================${NC}"
+echo ""
+
+if [ -f "./update_upgrade.sh" ]; then
+    DESKTOP_PATH="/home/$usernameroot/Desktop"
+    if [ -d "$DESKTOP_PATH" ]; then
+        log_message "INFO" "Copying update_upgrade.sh to Desktop"
+        cp "./update_upgrade.sh" "$DESKTOP_PATH/"
+        chmod +x "$DESKTOP_PATH/update_upgrade.sh"
+        chown "$usernameroot:$usernameroot" "$DESKTOP_PATH/update_upgrade.sh"
+        echo -e "${GREEN}✓ update_upgrade.sh copied to Desktop${NC}"
+    else
+        log_message "WARNING" "Desktop directory not found: $DESKTOP_PATH"
+    fi
+else
+    log_message "WARNING" "update_upgrade.sh not found"
 fi
 
 echo ""
