@@ -195,6 +195,10 @@ handle_aide_prerequisites() {
     # Create directory if it doesn't exist
     mkdir -p /var/lib/aide
     
+    # Create empty AIDE database file
+    log_message "INFO" "Creating AIDE database file..."
+    touch /var/lib/aide/aide.db
+    
     # Wait for package configuration to complete
     sleep 2
     
@@ -385,7 +389,7 @@ echo -e "${BLUE}ORGANIZING LOG FILES${NC}"
 echo -e "${BLUE}========================================${NC}"
 echo ""
 
-LOG_DIR="logs_${log_hostname}"
+LOG_DIR="${log_hostname}"
 log_message "INFO" "Creating log directory: $LOG_DIR"
 
 # Create log directory
