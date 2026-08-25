@@ -20,17 +20,21 @@ echo "###########################################"
 echo "#   Step 33: Install and run Lynis - START #"
 echo "###########################################"
 
-echo "Step 33: Install and run Lynis --> MSG: Download the key from central keyserver (requires wget)"
-sudo wget -O - https://packages.cisofy.com/keys/cisofy-software-public.key | sudo apt-key add -
+echo "Step 33: Install and run Lynis --> MSG: Ensure prerequisites (wget, gnupg) are installed"
+sudo apt update
+sudo apt install -y wget gnupg
+
+echo "Step 33: Install and run Lynis --> MSG: Download the key from central keyserver (requires wget) and store it in a dedicated keyring"
+sudo wget -O - https://packages.cisofy.com/keys/cisofy-software-public.key | sudo gpg --dearmor -o /usr/share/keyrings/cisofy-lynis-archive-keyring.gpg
 
 echo "Step 33: Install and run Lynis --> MSG: Install HTTPS for repository connection and transport"
-sudo apt install apt-transport-https
+sudo apt install -y apt-transport-https
 
 echo "Step 33: Install and run Lynis --> MSG: Skip downloading translations"
 echo 'Acquire::Languages "none";' | sudo tee /etc/apt/apt.conf.d/99disable-translations
 
 echo "Step 33: Install and run Lynis --> MSG: Add the repository"
-echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | sudo tee /etc/apt/sources.list.d/cisofy-lynis.list
+echo "deb [signed-by=/usr/share/keyrings/cisofy-lynis-archive-keyring.gpg] https://packages.cisofy.com/community/lynis/deb/ stable main" | sudo tee /etc/apt/sources.list.d/cisofy-lynis.list
 
 echo "Step 33: Install and run Lynis --> MSG: Install Lynis"
 sudo apt update
